@@ -25,6 +25,11 @@
           <span>Packages</span>
         </el-menu-item>
 
+        <el-menu-item index="/products">
+          <el-icon><Grid /></el-icon>
+          <span>Products</span>
+        </el-menu-item>
+
         <el-menu-item index="/orders">
           <el-icon><ShoppingCart /></el-icon>
           <span>Orders</span>
@@ -55,7 +60,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { House, User, Box, ShoppingCart } from '@element-plus/icons-vue';
+import { House, User, Box, ShoppingCart, Grid } from '@element-plus/icons-vue';
 import { ElMessage } from 'element-plus';
 import { useAuthStore } from '../stores/auth';
 
@@ -70,6 +75,7 @@ const pageTitle = computed(() => {
     '/': 'Dashboard',
     '/users': 'User Management',
     '/packages': 'Package Management',
+    '/products': 'Products Management',
     '/orders': 'Order Management',
   };
   return titles[route.path] || 'Admin Panel';
