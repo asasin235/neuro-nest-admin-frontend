@@ -1,0 +1,23 @@
+<template>
+  <div class="view-placeholder">
+    <h1>How It Works Content Editor</h1>
+    <p class="coming-soon">Coming Soon - Single record editor</p>
+  </div>
+</template>
+
+<script setup lang="ts">
+// TODO: Implement single-record editor for how it works content
+</script>
+
+<style scoped>
+.view-placeholder {
+  padding: 2rem;
+  text-align: center;
+}
+.coming-soon {
+  color: #64748b;
+  font-size: 1.25rem;
+  margin: 2rem 0;
+}
+</style>
+
