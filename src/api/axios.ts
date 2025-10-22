@@ -20,7 +20,9 @@ api.interceptors.request.use((config) => {
 api.interceptors.response.use(
   (response) => response,
   (error) => {
-    if (error.response?.status === 401) {
+    // Only auto-redirect on 401 if NOT on the login page
+    // This allows login errors to be displayed
+    if (error.response?.status === 401 && !error.config.url?.includes('/auth/login')) {
       localStorage.removeItem('adminToken');
       window.location.href = '/login';
     }
